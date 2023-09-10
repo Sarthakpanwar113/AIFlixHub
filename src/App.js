@@ -1,15 +1,12 @@
 
-import './App.css';
+import Body from './components/Body';
 
 function App() {
   return (
-    <div className="text-3xl text-green-400">
-      <h1>
-        netflix GPT creating by own ok
-      </h1>
+   <Body />
+  )
       
-    </div>
-  );
+      
 }
 
 export default App;
