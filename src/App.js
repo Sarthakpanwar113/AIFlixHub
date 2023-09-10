@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="text-3xl text-green-400">
       <h1>
-        netflix GPT creating by own
+        netflix GPT creating by own ok
       </h1>
       
     </div>
