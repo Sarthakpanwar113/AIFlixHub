@@ -1,6 +1,5 @@
 import React from 'react'
 import Browser from './Browser';
-// import Body from './Body';
 import Login from './Login';
 import { RouterProvider, createBrowserRouter,  } from 'react-router-dom';
 

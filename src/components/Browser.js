@@ -1,31 +1,30 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Header from './Header'
-import { API_OPTIONS } from './utils/constants'
+import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
+import MainContainer from './MainContainer';
+import SecoundaryContainer from './SecoundaryContainer';
+
 
 const Browser = () => {
 
-
-
-  const getNowPlayingMovies = async () => {
-    const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?page=1', API_OPTIONS);
-    const json = await data.json();
-    // console.log(json);
-    console.log(json.results);
-
-  };
-
-
-  useEffect(()=>{
-    getNowPlayingMovies();
-
-  },[])
-
-
-
-
+  useNowPlayingMovies();
+  //this hook we take care everthink
   return (
+    <div>
     <Header />
-  )
-}
+    <MainContainer />
+    <SecoundaryContainer />
+    </div>
+
+    
+
+    // MainContainer
+          // - VideoBackground
+          // - VideoTitle
+    // SecoundaryContainer
+          //- movieList * n
+              // - many cards*n
+  );
+};
 
 export default Browser

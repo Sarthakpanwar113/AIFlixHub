@@ -1,14 +1,14 @@
 // rafce- react function component export 
 import React, { useRef, useState } from 'react'
 import Header from './Header'
-import { checkValidData } from './utils/validate';
+import { checkValidData } from '../utils/validate';
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from '../components/utils/firebase';
+import { auth } from '../utils/firebase';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
-import { addUser } from './utils/userSlice';
-import { USER_AVTAR } from './utils/constants';
+import { addUser } from '../utils/userSlice';
+import { USER_AVTAR } from '../utils/constants';
 
 
 const Login = () => {
