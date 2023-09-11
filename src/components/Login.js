@@ -5,7 +5,6 @@ import { checkValidData } from './utils/validate';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../components/utils/firebase';
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser } from './utils/userSlice';
@@ -14,7 +13,7 @@ import { addUser } from './utils/userSlice';
 const Login = () => {
 
   const [isSignInForm, setIsSignInForm] = useState(true);
-  const navigate = useNavigate();
+  
   const dispatch = useDispatch();
 
   const [errorMessage, setErrorMessage] = useState(null);
@@ -57,11 +56,7 @@ const Login = () => {
             const {uid, email, displayName, photoURL} = auth.currentUser;
             //store uid email display name etc
             dispatch(addUser({uid: uid, email: email, displayName: displayName, photoURL: photoURL,}));
-            // Profile updated!
-            // then navigate it
-            //now sign in or sign up now navigate to bworser page
-
-            navigate("./browse");
+            
             // ...
           }).catch((error) => {
             // An error occurred
@@ -88,8 +83,8 @@ const Login = () => {
           // Signed in 
           const user = userCredential.user;
           // ...
-          console.log(user);
-          navigate("/browse");
+          // console.log(user);
+         
         })
         .catch((error) => {
           const errorCode = error.code;
