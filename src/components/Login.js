@@ -8,6 +8,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { addUser } from './utils/userSlice';
+import { USER_AVTAR } from './utils/constants';
 
 
 const Login = () => {
@@ -49,7 +50,7 @@ const Login = () => {
 
           //as user sign in nowupdate it
           updateProfile(user, {
-            displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/92731861?v=4"
+            displayName: name.current.value, photoURL:USER_AVTAR,
           }).then(() => {
 
             //dispach the actio and update the user
