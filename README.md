@@ -95,6 +95,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 -  Unsubscibed to the onAuthStateChanged callback by using return in useeffect
 - add harcoded value to the contanst file
 
+- register TMDB API & created an app & get access token 
+- get data from TMDB now playing movie LIST Api
+
 
 
 
