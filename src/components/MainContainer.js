@@ -5,7 +5,7 @@ import VideoBackground from './VideoBackground';
 
 const MainContainer = () => {
 
-    const movies = useSelector((store) => store.movies?.addNowPlayingMovies);
+    const movies = useSelector((store) => store.movies?.nowPlayingMovies);
     //if movie is not present then return
     if(!movies) return;
     //we need one main movie to display
