@@ -21,3 +21,6 @@ export const API_OPTIONS =  {
   {identifier: "hindi", name: "Hindi"},
   {identifier: "spanish", name: "Spanish"},
 ];
+
+
+export const OPENAI_KEY =" sk-3D2J4a3BIDKadwXfSDwBT3BlbkFJMx7yhYlnZkcdMSuxRa3";
