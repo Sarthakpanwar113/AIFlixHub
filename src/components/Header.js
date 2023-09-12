@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { LOGO } from '../utils/constants';
+import { toggleGptSearchView } from '../utils/gptSlice';
 
 
 const Header = () => {
@@ -61,25 +62,30 @@ const Header = () => {
   }, []);
 
 
-
+const handlerGptSearchClick =() =>{
+  //toggle GPT search
+  dispatch(toggleGptSearchView());
+  //don't pass any value bcz it just toggle
+}
 
 
 
 
 
   return (
-    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between  '>
-      <img className='w-44 mx-auto md:mx-0 '
+    <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black  z-10 flex  justify-between  '>
+      <img className='w-44  '
         src={LOGO}
         alt='logo' />
 
       {user && (
-        <div className=' flex p-2 justify-between'>
-          <img className='hidden md:block w-12 h-12" '
+        <div className=' flex p-2 '>
+          <button className='py-2 px-4  bg-yellow-800 text-white mx-4 my-2 rounded-lg' onClick={handlerGptSearchClick}>GPT SEARCH</button>
+          <img className=' w-12 h-12" '
             src={user?.photoURL}
             alt='user-icon' />
 
-          <button onClick={handleSignOut} className='font-bold text-white'>Sign Out</button>
+          <button onClick={handleSignOut} className='font-bold text-white '>Sign Out</button>
         </div>
       )};
 
