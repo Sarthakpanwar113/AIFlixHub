@@ -108,6 +108,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - added tailwind classes to makke main conatiner look awesome
 
 
+- now build our secondary component
+
+
 
 
 # Features
