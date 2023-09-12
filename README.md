@@ -109,6 +109,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 - now build our secondary component
+- build movie card
+- build movie list
+- tmdb img cdn url
+- Made brose page good with tailwind css
+- created hook of popular movies
 
 
 
