@@ -4,6 +4,8 @@ import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import MainContainer from './MainContainer';
 import SecoundaryContainer from './SecoundaryContainer';
 import usePopularMovies from '../hooks/usePopularMovies';
+import useTopRatedMovies from '../hooks/useTopRated';
+import useUpComingMovies from '../hooks/useUpComingMovies';
 
 
 const Browser = () => {
@@ -11,6 +13,8 @@ const Browser = () => {
   useNowPlayingMovies();
   //this hook we take care everthink
   usePopularMovies();
+  useTopRatedMovies();
+  useUpComingMovies();
   return (
     <div>
     <Header />

@@ -115,6 +115,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Made brose page good with tailwind css
 - created hook of popular movies
 
+- created custom hook toprated
+- another custom hook upcmoing and popular movies
 
 
 
