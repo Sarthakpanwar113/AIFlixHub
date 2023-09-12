@@ -23,4 +23,4 @@ export const API_OPTIONS =  {
 ];
 
 
-export const OPENAI_KEY =" sk-3D2J4a3BIDKadwXfSDwBT3BlbkFJMx7yhYlnZkcdMSuxRa3";
+export const OPENAI_KEY =" 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";

@@ -25,7 +25,7 @@ const GptSearchBar = () => {
         console.log(searchText.current.value);
         //give search text value
         //make api call to OPEN API and get movie results
-        const gptQuery = "Act as a Movie Recommendation System and suggest some movies for the query" + searchText.current.value + ". only give me names of 6 movies, comma seperated like the example result given ahead. Example Result: Gadar, Sholay, Hum Tum, Golmaal, Jawan";
+        const gptQuery = "Act as a Movie Recommendation System and suggest some movies for the query" + searchText.current.value + ". only give me names of 5 movies, comma seperated like the example result given ahead. Example Result: Gadar, Sholay, Hum Tum, Golmaal, Jawan";
 
         const gptResults = await openai.chat.completions.create({
             messages: [{ role: 'user', content: gptQuery }],
@@ -48,7 +48,7 @@ const GptSearchBar = () => {
         const tmdbResults =await Promise.all(promiseArray);
         console.log(tmdbResults);
 
-        dispatch(addGptMovieResult({moviesName: gptMovies, movieResults : tmdbResults}));
+        dispatch(addGptMovieResult({movieNames: gptMovies, movieResults : tmdbResults}));
 
 
     };
