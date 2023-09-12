@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { API_OPTIONS } from '../utils/constants';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addTrailerVideo } from '../utils/movieSlice';
 
 
 const useMovieTrailer = (movieId) => {
     
     const dispatch = useDispatch();
+    //memorization
+    const trailerVideo = useSelector((store)=> store.movies.trailerVideo);
     // or 
     // const [trailerId, setTrailerId] = useState(null);
     //fetch trailer video i have to make aan api call for that we need movie id
@@ -25,7 +27,7 @@ const useMovieTrailer = (movieId) => {
 
     };
     useEffect(() => {
-        getMovieVideos();
+        !trailerVideo && getMovieVideos();
     }, []);
 }
 

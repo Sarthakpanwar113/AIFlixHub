@@ -7,6 +7,7 @@ const useUpComingMovies = () => {
   // Fetch Data from TMDB API and update store
   const dispatch = useDispatch();
 
+  //memorization
 //   const popularMovies = useSelector((store) => store.movies.popularMovies);
 
   const getUpComingMovies = async () => {
