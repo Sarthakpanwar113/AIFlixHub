@@ -120,6 +120,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 - GPT SearcH Feature
+- gpt search bar 
+- gpt search page
+- **{bones} multi lang feature in our app
+
 
 
 
