@@ -119,7 +119,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - another custom hook upcmoing and popular movies
 
 
-- GPT SearcH Feacher
+- GPT SearcH Feature
+
 
 
 
